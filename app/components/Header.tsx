@@ -48,9 +48,6 @@ export default function Header({ currentPage = "" }: HeaderProps) {
               <h1 className="text-xl font-bold text-blue-600 leading-tight">
                 elimikabure
               </h1>
-              <span className="text-xs text-gray-500 leading-tight">
-                Free Education
-              </span>
             </div>
           </Link>
 

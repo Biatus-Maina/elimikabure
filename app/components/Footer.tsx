@@ -36,9 +36,6 @@ export default function Footer() {
                 <h3 className="text-2xl font-bold text-blue-600 leading-tight">
                   elimikabure
                 </h3>
-                <span className="text-sm text-gray-500 leading-tight">
-                  Free Education
-                </span>
               </div>
             </Link>
             <p className="text-gray-600 mb-6 max-w-md">

@@ -143,55 +143,6 @@ export default function ScholarshipsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/web-app-manifest-192x192.png"
-                alt="elimikabure logo"
-                width={32}
-                height={32}
-                className="mr-3"
-              />
-              <div className="flex flex-col">
-                <h1 className="text-xl font-bold text-blue-600 leading-tight">
-                  elimikabure
-                </h1>
-                <span className="text-xs text-gray-500 leading-tight">
-                  Free Education
-                </span>
-              </div>
-            </Link>
-            <nav className="hidden md:flex space-x-8">
-              <Link
-                href="/"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
-              >
-                Home
-              </Link>
-              <Link
-                href="/scholarships"
-                className="text-base font-medium text-blue-600"
-              >
-                Scholarships
-              </Link>
-              <Link
-                href="/courses"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
-              >
-                Courses
-              </Link>
-              <Link
-                href="/materials"
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
-              >
-                Materials
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <div className="bg-blue-600 text-white">

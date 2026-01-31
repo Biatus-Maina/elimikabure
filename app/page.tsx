@@ -1,6 +1,8 @@
+"use client";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -21,7 +23,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {/* Scholarships */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+            >
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
@@ -70,10 +75,13 @@ export default function Home() {
                   />
                 </svg>
               </Link>
-            </div>
+            </motion.div>
 
             {/* Free Courses */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+            >
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
@@ -121,10 +129,13 @@ export default function Home() {
                   />
                 </svg>
               </Link>
-            </div>
+            </motion.div>
 
             {/* Study Materials */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <motion.div
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+            >
               <div className="flex items-center mb-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
@@ -172,7 +183,7 @@ export default function Home() {
                   />
                 </svg>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -288,12 +299,18 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-8">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  Learn more about us
-                </Link>
+                  <Link
+                    href="/about"
+                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+                  >
+                    Learn more about us
+                  </Link>
+                </motion.div>
               </div>
             </div>
             <div className="mt-12 lg:mt-0">
@@ -332,26 +349,40 @@ export default function Home() {
       {/* CTA Section */}
       <div className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
-            Ready to Start Your Educational Journey?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of African students who are accessing quality
-            education resources and opportunities.
-          </p>
+          <div>
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
+              Ready to Start Your Educational Journey?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Join thousands of African students who are accessing quality
+              education resources and opportunities.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/scholarships"
-              className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
-              Find Scholarships
-            </Link>
-            <Link
-              href="/courses"
-              className="inline-flex items-center px-8 py-4 border border-blue-600 text-lg font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-200"
+              <Link
+                href="/scholarships"
+                className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+              >
+                Find Scholarships
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
-              Browse Free Courses
-            </Link>
+              <Link
+                href="/courses"
+                className="inline-flex items-center px-8 py-4 border border-blue-600 text-lg font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-200"
+              >
+                Browse Free Courses
+              </Link>
+            </motion.div>
           </div>
         </div>
       </div>
